@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-widht, initial-scale=1.0">
+
+<title>Happy Diwali From Tejal Didi</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+
+body {
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #210707, #650e0e, #250707);
+    color: center;
+    text-align: 100vh;
+    overflow-x: hidden;
+}
+
+.top {
+    color: #ffcf58;
+    font-size: 18px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(45px, 10vw, 86px);
+    color: #ffd76b;
+    text-shadow: 0 0 15px #ff9900,
+                 0 0 35px #ff6500;
+    margin-bottom: 20px;             
+}
+
+.subtitle {
+    font-size: 22px;
+    color: 25px 0;
+    animation: glow 2s infinite alternate;
+}
+
+.diyas {
+    font-size: 55px;
+    margin: 25px 0;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 5px orange);
+    }
+    to {
+        filter: drop-shadow(0 0 20px gold);
+    }
+}
+
+.card {
+    border: 2px solid #d6a63c;
+    border-radius: 20px;
+    padding: 35px 25px;
+    margin: 30px auto;
+    background: rgba(255, 215, 100, 0.08);
+    box-shadow: 0 0 25px rgba(255, 190, 50, 0.2);
+}
+
+.card h2 {
+    color: #ffda78;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #fff0d0;
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+button {
+    background: linear-gradient(45deg, #ffbd36, #ffe49a);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #591000;
+    cursor: pointer;
+    margin: 15px 8px;
+    transition: 0.3;
+}
+
+button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px gold;
+}
+
+#surprise {
+    display: none;
+    font-size: 23px;
+    color: #ffe7a0;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+footer {
+    padding: 30px 15px;
+    color: #e8c77b;
+    font-size: 17px;
+}
+
+.sparkle {
+    position: fixed;
+    top: -20px;
+    color: gold;
+    font-size: 20px;
+    pointer-events: none;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+</style>
+</head>    
+
+
+<body>
+
+    <div class="container">
+
+        <div class="top">
+           ✨ FESTIVAL OF LIGHTS ✨ 
+        </div>
+
+        <div class="diyas">
+             🪔 🪔 🪔
+        </div>
+
+       <h1>Happy Diwali!</h1>
+       
+       <p class="subtitle">
+          wishing you A Happy,Lovely and Joyfull
+       </p>
+
+       <div class="card">
+
+        <h2>Dear Family & Relatives</h2>
+
+        <p>
+            May this beautiful festival of Lights 
+            fill your homme with happiness,
+            your heart with love,
+            and your life with endless blessing.
+
+            <br><br>
+
+            May mata Lakshmi bless you with 
+            wealth, good health, peace and success.
+
+            <br><br>
+
+            Wishing you and your full family 
+            A sparkling and wonderful Diwali!
+
+            <br><br>
+
+            May every diya bring new hope,
+            every celebration being joy,
+            and every moment bring beautiful memories.
+        </p>
+
+        <div class="diyas">
+            🪔 ✨ 🪔
+        </div>
+
+        <button id="surpriseBtn">
+    Open Your Diwali Surprise 🎁
+</button>
+
+<div id="surprise" style="display:none;">
+    ❤️ Sending lots of love and warm wishes
+    to you and your family! ❤️
+
+    <br><br>
+
+    May your life shine as brightly as
+    millions of diyas!
+
+    <br><br>
+
+    शुभ दीपावली! 🪔✨
+</div>
+
+     </div>
+
+     <div class="diyas">
+        🌸 ✨ 🌸
+     </div>
+
+     <h2 style="color:#ffd76b;">
+        with love, Tejal Didi ❤️
+     </h2>
+</div>
+
+<footer>
+    Warm Diwali Wishes from
+    <br><br>
+    ❤️ Tejal Didi ❤️
+    <br><br>
+    ✨ शुभ दीपावली ✨
+</footer>
+
+<script>
+
+    function showSurprise() {
+
+        documentById("surprise").style.display = "block";
+
+    }
+
+    function shareWebsite() {
+
+        if (navigator.share) {
+
+            navigator.share({
+                title: "Happy Diwali From Tejal Didi",
+                text: "Wishing you and your family a very Happy Diwali! 🪔", 
+                url: window.location.href
+            });
+        } else {
+
+            alert("Copy your website link and share it with your relatives!");
+
+        }
+    }
+
+    for (let i = 0; i < 25; i++) {
+        let sparkle = document.createElement("div");
+
+        sparkle.className = "sparkle";
+
+        sparkle.innerHTML = "✦";
+
+        sparkle.style.left = Math.random() * 100 + "vw";
+
+        sparkle.style.animationdelay = Math.random() * 5 + "s";
+
+        sparkle.style.animationDuration =
+             (3 + Math.random() * 5) + "s";
+
+             document.body.appendChild(sparkle);
+
+    }
+
+  document.getElementById("surpriseBtn").addEventListener("click", function() {
+
+    document.getElementById("surprise").style.display = "block";
+
+    this.innerText = "Surprise Opened! ❤️";
+
+});  
+</script>
+
+</body>
+</html>
